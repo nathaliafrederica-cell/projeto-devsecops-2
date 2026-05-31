@@ -1,0 +1,25 @@
+title = "Gitleaks - Desafio DevSecOps"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "hardcoded-api-key"
+description = "Chave de API hardcoded no código-fonte"
+regex = '''(?i)\b(api[_-]?key)\b\s*[:=]\s*['"][^'"\n]{3,}['"]'''
+keywords = ["api_key", "apikey", "api-key"]
+
+[[rules]]
+id = "hardcoded-db-password"
+description = "Senha de banco de dados hardcoded no código-fonte"
+regex = '''(?i)\b(db[_-]?password|password|senha[_-]?banco)\b\s*[:=]\s*['"][^'"\n]{3,}['"]'''
+keywords = ["db_password", "password", "senha"]
+
+[allowlist]
+description = "Não escanear os próprios artefatos de relatório do Gitleaks"
+paths = [
+  	'''gitleaks-web/gitleaks-report\.json''',
+  '''gitleaks-report\.sarif''',
+]
+
+FIM DO ARQUIVO
