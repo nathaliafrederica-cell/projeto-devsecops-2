@@ -21,5 +21,3 @@ paths = [
   	'''gitleaks-web/gitleaks-report\.json''',
   '''gitleaks-report\.sarif''',
 ]
-
-FIM DO ARQUIVO
