@@ -32,7 +32,7 @@ jobs:
       # ❌ PASSO 3: IMPLEMENTE AQUI — Secrets Scanning com Gitleaks
       # Dica: use a action oficial "gitleaks/gitleaks-action@v2"
       - name: 🔑 Secrets Scanning
-        uses: gitleaks/gitleaks-action@v2
+        uses: .gitleaks.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
